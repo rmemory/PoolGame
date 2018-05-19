@@ -1,7 +1,7 @@
 const sprites = {};
 let assetsStillLoading = 0;
 
-const assetsLoadingLoop = (callback) => {
+const assetsLoadingLoop = () => {
 	if (assetsStillLoading) {
 		/* The general purpose of requestAnimationFrame is to inform the browser 
 		that you wish to perform an animation, or more generally perform an 

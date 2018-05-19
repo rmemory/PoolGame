@@ -2,17 +2,17 @@ function Game() {
 
 }
 
-Game.prototype.init = function () {
-	this.gameWorld = new GameWorld();
+Game.prototype.init = () => {
+	PoolGame.gameWorld = new GameWorld();
 }
 
-Game.prototype.start = function () {
+Game.prototype.start = function() {
 	console.log("starting game ...");
-	this.init();
-	this.mainLoop();
+	PoolGame.init();
+	PoolGame.mainLoop();
 }
 
-Game.prototype.mainLoop = function () {
+Game.prototype.mainLoop = function() {
 	canvas.clear();
 	PoolGame.gameWorld.update();
 	PoolGame.gameWorld.draw();
